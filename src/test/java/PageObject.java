@@ -29,7 +29,9 @@ public class PageObject {
     @Test
     public void Approach1Test() {
 
-        Task8Page1 task8Page = new Task8Page1(driver);
+        Task8Page task8Page = new Task8Page(driver);
+
+        task8Page.initLoginPageElements();
 
         task8Page.selectCardType(cardType)
                 .enterName(name)
@@ -38,6 +40,5 @@ public class PageObject {
                 .selectMonth(month)
                 .selectYear(year)
                 .clickPay();
-
     }
 }

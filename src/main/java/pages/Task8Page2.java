@@ -16,6 +16,7 @@ public class Task8Page2 {
     By yearSelect = By.id("task8_form_cardInfo_year");
     By payButton = By.cssSelector("button.btn");
 
+
     public Task8Page2(WebDriver driver){
         this.driver = driver;
     }

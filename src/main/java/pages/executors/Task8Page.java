@@ -7,8 +7,8 @@ import pages.locators.Task8Locators;
 
 public class Task8Page {
 
-    public WebDriver driver;
-	public Task8Locators locators;
+    private WebDriver driver;
+	private Task8Locators locators;
 
 	public Task8Page(WebDriver driver)
 	{
