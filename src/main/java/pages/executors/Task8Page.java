@@ -15,7 +15,7 @@ public class Task8Page {
 		this.driver = driver;
 	}
 
-	public void initLoginPageElements()
+	public void initPageElements()
 	{
 		locators = new Task8Locators();
 		PageFactory.initElements(driver, locators);

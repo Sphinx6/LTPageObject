@@ -9,6 +9,8 @@ public class Task8Locators {
 	@FindBy(how = How.ID, using = "task8_form_cardType")
 	public WebElement cardTypeSelect;
 
+    //public WebElement task8_form_cardType;
+
 	@FindBy(how = How.ID, using = "task8_form_name")
 	public WebElement nameInput;
 
@@ -26,4 +28,5 @@ public class Task8Locators {
 
 	@FindBy(how = How.CSS, using = "button.btn")
 	public WebElement payButton;
+
 }
