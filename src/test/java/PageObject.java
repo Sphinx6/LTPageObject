@@ -8,15 +8,7 @@ import pages.executors.Task8Page;
 
 public class PageObject {
 
-    WebDriver driver;
-
-    private String cardType = "MasterCard";
-    private String name = "Jan Kowalski";
-    private String cardNumber = "5555555555554444";
-    private String cvv = "123";
-    private String month = "July";
-    private String year = "2018";
-
+    private WebDriver driver;
 
     @Before
     public void setUp(){
@@ -29,16 +21,14 @@ public class PageObject {
     @Test
     public void Approach1Test() {
 
-        Task8Page task8Page = new Task8Page(driver);
+        Task8Page1 task8Page = new Task8Page1(driver);
 
-        task8Page.initLoginPageElements();
-
-        task8Page.selectCardType(cardType)
-                .enterName(name)
-                .enterCardNumber(cardNumber)
-                .enterCvvCode(cvv)
-                .selectMonth(month)
-                .selectYear(year)
+        task8Page.selectCardType("MasterCard")
+                .enterName("Jan Kowalski")
+                .enterCardNumber("5555555555554444")
+                .enterCvvCode("123")
+                .selectMonth("July")
+                .selectYear("2018")
                 .clickPay();
     }
 }

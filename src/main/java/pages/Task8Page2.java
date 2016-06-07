@@ -6,7 +6,7 @@ import org.openqa.selenium.support.ui.Select;
 
 public class Task8Page2 {
 
-    WebDriver driver;
+    private WebDriver driver;
 
     By cardTypeSelect = By.id("task8_form_cardType");
     By nameInput = By.id("task8_form_name");

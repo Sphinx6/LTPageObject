@@ -6,7 +6,7 @@ import org.openqa.selenium.support.ui.Select;
 
 public class Task8Page1 {
 
-    WebDriver driver;
+    private WebDriver driver;
 
     public Task8Page1(WebDriver driver){
         this.driver = driver;

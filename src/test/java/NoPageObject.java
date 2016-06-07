@@ -7,15 +7,7 @@ import org.openqa.selenium.support.ui.Select;
 
 public class NoPageObject {
 
-    WebDriver driver;
-
-    private String cardType = "MasterCard";
-    private String name = "Jan Kowalski";
-    private String cardNumber = "5555555555554444";
-    private String cvv = "123";
-    private String month = "July";
-    private String year = "2018";
-
+    private WebDriver driver;
 
     @Before
     public void setUp(){
@@ -24,20 +16,18 @@ public class NoPageObject {
         driver.manage().window().maximize();
     }
 
-
     @Test
     public void Approach1Test() {
 
         Select select = new Select(driver.findElement(By.id("task8_form_cardType")));
-        select.selectByVisibleText(cardType);
-        driver.findElement(By.id("task8_form_name")).sendKeys(name);
-        driver.findElement(By.id("task8_form_cardNumber")).sendKeys(cardNumber);
-        driver.findElement(By.id("task8_form_cardCvv")).sendKeys(cvv);
+        select.selectByVisibleText("MasterCard");
+        driver.findElement(By.id("task8_form_name")).sendKeys("Jan Kowalski");
+        driver.findElement(By.id("task8_form_cardNumber")).sendKeys("5555555555554444");
+        driver.findElement(By.id("task8_form_cardCvv")).sendKeys("123");
         Select selectMonth = new Select(driver.findElement(By.id("task8_form_cardInfo_month")));
-        selectMonth.selectByVisibleText(month);
+        selectMonth.selectByVisibleText("July");
         Select selectYear = new Select(driver.findElement(By.id("task8_form_cardInfo_year")));
-        selectYear.selectByVisibleText(year);
+        selectYear.selectByVisibleText("2018");
         driver.findElement(By.cssSelector("button.btn")).click();
-
     }
 }
