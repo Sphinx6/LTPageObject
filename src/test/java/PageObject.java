@@ -6,22 +6,28 @@ import pages.Task8Page1;
 import pages.Task8Page2;
 import pages.executors.Task8Page;
 
+import java.util.concurrent.TimeUnit;
+
 public class PageObject {
 
     private WebDriver driver;
 
     @Before
     public void setUp(){
+
         driver = new FirefoxDriver();
         driver.get("https://testingcup.pgs-soft.com/task_8");
         driver.manage().window().maximize();
+        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
     }
 
 
     @Test
     public void Approach1Test() {
 
-        Task8Page1 task8Page = new Task8Page1(driver);
+        Task8Page task8Page = new Task8Page(driver);
+
+        task8Page.initPageElements();
 
         task8Page.selectCardType("MasterCard")
                 .enterName("Jan Kowalski")

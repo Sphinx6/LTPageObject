@@ -10,7 +10,7 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <selenium-version>2.53.0</selenium-version>
+        <selenium-version>3.0.1</selenium-version>
         <info.cukes-version>1.2.4</info.cukes-version>
         <junit-version>4.12</junit-version>
     </properties>
@@ -20,12 +20,6 @@
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-java</artifactId>
-            <version>${selenium-version}</version>
-        </dependency>
-
-        <dependency>
-            <groupId>org.seleniumhq.selenium</groupId>
-            <artifactId>selenium-firefox-driver</artifactId>
             <version>${selenium-version}</version>
         </dependency>
 
